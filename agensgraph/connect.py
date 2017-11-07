@@ -137,3 +137,5 @@ psycopg2.extensions.register_type(EDGE_ARRAY)
 
 PATH = psycopg2.extensions.new_type((7032,), "PATH", path_parser)
 psycopg2.extensions.register_type(PATH)
+
+connect = psycopg2.connect

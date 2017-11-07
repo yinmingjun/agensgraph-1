@@ -31,10 +31,5 @@ setup(
     install_requires=['psycopg2'],
     extras_require={
         'test': ['coverage', 'pytest'],
-    },
-    entry_points={
-        'console_scripts': [
-            'agensgraph=agensgraph:main',
-        ],
     }
 )

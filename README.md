@@ -11,12 +11,13 @@ Go to [Psycopg's documentation][2] for documentation about the Python interface 
 ```python
 import agensgraph
 
-conn = agensgraph.psycopg2.connect("dbname=iomed")
+conn = agensgraph.connect("dbname=iomed")  # Equivalent to psycopg2.connect
 cur = conn.cursor()
 cur.execute("SET graph_path=snomed;")
 
 cur.execute("MATCH (a)-[r]->(b) RETURN a,r,b LIMIT 10;")
 result = cur.fetchall()
+
 ```
 
 
